@@ -1,78 +1,116 @@
+/* Estilos Generales */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #1a1a1a;
+    background-image: url('https://www.transparenttextures.com/patterns/world-map.png');
     color: #333;
     text-align: center;
     margin: 0;
+    padding: 15px;
 }
 
+/* Contenedor principal que simula una carta o panel */
 .container {
-    background: white;
+    background: #f5eeda; /* Color pergamino */
     padding: 2em;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #bfa88c;
+    width: 95%;
     max-width: 500px;
 }
 
-h1 {
-    color: #1c1e21;
+/* Logo de Risk */
+.risk-logo {
+    width: 80%;
+    max-width: 250px;
     margin-bottom: 1em;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));
 }
 
+h1 {
+    font-family: 'Cinzel', serif;
+    color: #8B0000; /* Rojo oscuro */
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+/* Área donde se muestra la misión */
 #mission-display {
-    min-height: 100px;
+    min-height: 120px;
     padding: 1.5em;
     margin: 1.5em 0;
-    border: 2px dashed #ddd;
+    border: 1px solid #d4c4a2;
+    background-color: #fffbf2;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
-    font-weight: bold;
-    color: #0056b3;
+    font-weight: 500;
+    color: #4a2c2a;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
+#mission-display p {
+    margin: 0;
+}
+
+/* Estilos de botones */
 button {
     border: none;
     padding: 15px 30px;
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
     width: 100%;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
 }
 
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Botón principal de sortear */
 #sortearBtn {
-    background-color: #007bff;
+    background-color: #c82333; /* Rojo Risk */
     color: white;
+    border-bottom: 3px solid #8B0000;
 }
 
 #sortearBtn:hover {
-    background-color: #0056b3;
+    background-color: #a81e2a;
 }
 
 #sortearBtn:disabled {
-    background-color: #a0a0a0;
+    background-color: #6c757d;
+    color: #ccc;
     cursor: not-allowed;
+    border-bottom: 3px solid #495057;
+    transform: none;
 }
 
+/* Botón de reiniciar */
 #reiniciarBtn {
-    background-color: #dc3545;
+    background-color: #343a40;
     color: white;
+    border-bottom: 3px solid #1a1d20;
 }
 
 #reiniciarBtn:hover {
-    background-color: #c82333;
+    background-color: #23272b;
 }
 
+/* Clase para ocultar elementos */
 .hidden {
     display: none;
 }
