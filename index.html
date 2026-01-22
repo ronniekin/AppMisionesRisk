@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteador de Misiones de Risk</title>
+    <title>Gestor de Misiones de Risk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -12,13 +12,37 @@
 <body>
     <div class="container">
         <img src="images/risk_logo.png" alt="Logo de Risk" class="risk-logo">
-        <h1>Sorteador de Misiones</h1>
-        <div id="mission-display">
-            <p>Presiona el botón para sortear la primera misión.</p>
+        <h1 id="main-title">Configuración de la Partida</h1>
+
+        <!-- Fase 1: Configuración -->
+        <div id="setup-phase">
+            <div class="player-form">
+                <input type="text" id="player-name-input" placeholder="Nombre del Jugador">
+                <button id="add-player-btn">Añadir</button>
+            </div>
+            <ul id="player-list"></ul>
+            <button id="deal-btn" class="hidden">Repartir Misiones Secretas</button>
         </div>
-        <button id="sortearBtn">Sortear Primera Misión</button>
-        <button id="reiniciarBtn" class="hidden">Reiniciar Juego</button>
+
+        <!-- Fase 2: Juego -->
+        <div id="game-phase" class="hidden">
+            <ul id="game-player-list"></ul>
+            <div class="game-actions">
+                <button id="reveal-all-btn">Revelar Todas las Misiones</button>
+                <button id="reset-game-btn">Empezar Nuevo Juego</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Modal para ver misión secreta -->
+    <div id="mission-modal" class="hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-player-name"></h2>
+            <p id="modal-mission-text"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
